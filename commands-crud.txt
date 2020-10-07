@@ -24,6 +24,11 @@ After that run the connection file (db.js) from cmd as: node db.js
 nodemon db.js
 
 
+for cors :
+
+npm i --save cors
+
+
 
 
 [
@@ -40,3 +45,38 @@ nodemon db.js
         "salary": 20000
     }
 ]
+
+
+===== Angular ng new myapp gives error The Schematic workflow failed =========
+
+First ,verify your NPM cached memory
+
+npm cache verify
+
+then try :
+
+npm cache clean --force
+npm install –g @angular/cli@latest 
+ng new <YourProjectName>
+
+If the problem persists, then try the following
+
+npm cache clean --force
+npm update
+ng new <YourProjectName>
+
+
+====== Angular Command ======
+
+
+ng g c employee
+
+ng g class employee --type=model
+
+
+ng g s employee
+
+
+
+========================== Have to run Both to get the results ==================================  
+
