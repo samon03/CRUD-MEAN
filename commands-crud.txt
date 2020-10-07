@@ -1,0 +1,42 @@
+
+Connect MongoDB: 
+
+C:\Program Files\MongoDB\Server\4.2\bin   => mongod.exe (have to run this .exe file)
+
+=> open cmd 
+=> cd C:\Program Files\MongoDB\Server\4.2\bin
+=> mongod.exe --dbpath directory_where_to_havethe_data
+
+take bellow two and make a .bat file to run by double clicking: 
+=> cd C:\Program Files\MongoDB\Server\4.2\bin
+=> mongod.exe --dbpath directory_where_to_havethe_data
+
+Open Mongo campass -- new connection => fill => stay it as it is 
+=> create a Database and a collection
+
+
+npm init
+
+npm i --save express mongoose body-parser
+
+After that run the connection file (db.js) from cmd as: node db.js
+
+nodemon db.js
+
+
+
+
+[
+    {
+        "name": "Samon",
+        "position": "Web Developer",
+        "office": "CodeDoes",
+        "salary": 30000
+    },
+    {
+        "name": "Emon",
+        "position": "Graphices Designer",
+        "office": "CodeDoes",
+        "salary": 20000
+    }
+]
