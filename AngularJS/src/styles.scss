@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~material-design-icons/iconfont/material-icons.css';
 
 form div.input-field input{
   padding-left: 15px !important;
@@ -24,8 +24,18 @@ input.ng-invalid.ng-dirty{
 }
 
 div.card{
-  background-color : #083045;
+  background-color : #224927;
   border-radius: 10px;
+}
+
+.col.s5, .col.s7
+{
+  padding: 20px 40px;
+}
+
+.col.s5
+{
+  margin-right: 20px;
 }
 
 .vl {
@@ -36,10 +46,16 @@ div.card{
 a.action-btn{
   color: #9e9e9e ;
   margin: 0px 5px;
+  padding: 5%;
 
 }
 a.action-btn:hover{
   cursor: pointer;
+}
+
+tbody tr:hover
+{
+   background-color: #b8b5b5a6;
 }
 
 #toast-container {

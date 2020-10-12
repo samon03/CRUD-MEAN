@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class EmployeeService {
 
   selectedEmployee: Employee;
-  employee: Employee[];
+  employees: Employee[];
   readonly baseURL = 'http://localhost:3000/employees';
 
   constructor(private http: HttpClient) { }
@@ -18,4 +18,24 @@ export class EmployeeService {
   postEmployee(emp: Employee){
     return this.http.post(this.baseURL, emp);
   }
+
+  // tslint:disable-next-line: typedef
+  getEmployeeList()
+  {
+    return this.http.get(this.baseURL);
+  }
+
+  // tslint:disable-next-line: typedef
+  putEmployee(emp: Employee)
+  {
+    return this.http.put(this.baseURL + `/${emp._id}`, emp);
+  }
+
+  // tslint:disable-next-line: typedef variable-name
+  deleteEmployee(_id: string)
+  {
+    console.log(_id);
+    return this.http.delete(this.baseURL + `/${_id}`);
+  }
+
 }

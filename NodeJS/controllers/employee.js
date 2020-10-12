@@ -14,6 +14,25 @@ router.get('/', (req, res) => {
     }
 )});
 
+router.post('/', (req, res) => {
+    var emp = new Employee({
+        name: req.body.name,
+        position: req.body.position,
+        office: req.body.office,
+        salary: req.body.salary,
+    });
+    emp.save((err, val) => {
+        if (!err) 
+        { 
+            res.send(val); 
+        }
+        else 
+        { 
+            console.log('Error in Employee Save :' + JSON.stringify(err, undefined, 2)); 
+        }
+    });
+});
+
 router.get('/:id', (req, res) => {
 
     var id = req.params.id;
@@ -68,23 +87,6 @@ router.delete('/:id', (req, res) => {
     }
 
     Employee.findByIdAndRemove(id, (err, value) => {
-        if (!err) {
-            res.send(value);
-        } else {
-            console.log('Error Retriving Employees..' + JSON.stringify(err, undefined, 2));
-        }
-    });
-});
-
-router.post('/', (req, res) => {
-    var emp = new Employee({
-        name: req.body.name,
-        position: req.body.position,
-        office: req.body.office,
-        salary: req.body.salary
-    });
-
-    emp.save((err, value) => {
         if (!err) {
             res.send(value);
         } else {

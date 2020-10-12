@@ -80,3 +80,15 @@ ng g s employee
 
 ========================== Have to run Both to get the results ==================================  
 
+Icon: 
+npm install material-design-icons
+@import '~material-design-icons/iconfont/material-icons.css';
+
+
+==================================  Summary ==================================  
+
+1. Create backend 
+2. Create forntend
+3. Cors connection in backend 
+4. Use form/#/ng/http in service/create function in main component.ts 
+5. have to run both (backend & forntend)
