@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { log } from 'console';
 import { Employee } from '../shared/employee.model';
 
 import { EmployeeService } from '../shared/employee.service';
